@@ -67,5 +67,28 @@ namespace AddressBookProgramm
                 
             }
         }
+        public void DeleteContact()
+        {
+            Console.WriteLine("Enter First_name to Edit appropriate contact:");
+            string UserEnteredName = Console.ReadLine();
+
+            if (Contacts.Count <= 0)
+            {
+                Console.WriteLine("No contacts available");
+            }
+            else
+            {
+                Contact contact = null;
+                foreach (var item in Contacts)
+                {
+                    if (item.First_name == UserEnteredName)
+                    {
+                        contact = item;
+                    }
+                }
+                Contacts.Remove(contact);
+
+            }
+        }
     }
 }
