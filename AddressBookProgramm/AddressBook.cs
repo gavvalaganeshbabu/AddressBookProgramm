@@ -44,10 +44,11 @@ namespace AddressBookProgramm
                 }
             }
         }
-        public void DeleteContact()
+        public void EditContact()
         {
-            Console.WriteLine("Enter First_name to delete appropriate contact:");
+            Console.WriteLine("Enter First_name to Edit appropriate contact:");
             string UserEnteredName = Console.ReadLine();
+
             if (Contacts.Count <= 0)
             {
                 Console.WriteLine("No contacts available");
@@ -63,6 +64,7 @@ namespace AddressBookProgramm
                     }
                 }
                 Contacts.Remove(contact);
+
             }
         }
     }
