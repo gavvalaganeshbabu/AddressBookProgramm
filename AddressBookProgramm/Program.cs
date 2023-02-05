@@ -10,7 +10,7 @@ namespace AddressBookProgramm
             AddressBook address = new AddressBook();
             while (true)
             {
-                Console.WriteLine("Enter\n1. Add a New contact \n2. Diplay all Contacts\n3. Delete a contact");
+                Console.WriteLine("Enter\n1. Add a New contact \n2. Diplay all Contacts\n3. Edit a contact");
                 int input = int.Parse(Console.ReadLine());
 
                 switch (input)
@@ -22,7 +22,9 @@ namespace AddressBookProgramm
                         address.Display();
                         break;
                     case 3:
-                        address.DeleteContact();
+                        address.EditContact();
+                        Console.WriteLine("Enter Contact Details As You Want :");
+                        address.AddContact();
                         break;
                 }
             }
