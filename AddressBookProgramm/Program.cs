@@ -11,12 +11,15 @@ namespace AddressBookProgramm
             while (true)
             {
                 Console.WriteLine("Enter\n1. Add a New contact \n2. Diplay all Contacts\n3. Edit a contact\n4. Delete a Contact");
-                int input = int.Parse(Console.ReadLine());
-
+                int input = int.Parse(Console.ReadLine());                         
                 switch (input)
                 {
                     case 1:
-                        address.AddContact();
+                        Console.WriteLine("How many Users you want Add at a time :");
+                        int MultiUserCount = int.Parse(Console.ReadLine());
+                        for (int i = 1; i <= MultiUserCount; i++) {
+                            address.AddContact();
+                        }
                         break;
                     case 2:
                         address.Display();
