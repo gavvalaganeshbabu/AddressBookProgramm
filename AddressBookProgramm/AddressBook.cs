@@ -30,9 +30,6 @@ namespace AddressBookProgramm
             contact.Email_Id = Console.ReadLine();
             Contacts.Add(contact);
             Console.WriteLine("Contact Details Entered Successfully : ");
-        }
-      
-      
-        
+        }              
     }
 }
